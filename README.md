@@ -3,4 +3,4 @@
 
 This is a project from Frontend Mentor
 
-[I'm an inline-style link](https://landingapicountries.vercel.app/)
+[Live Preview](https://landingapicountries.vercel.app/)
