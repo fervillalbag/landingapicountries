@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function CountrieItem({ info }) {
    return (
       <div className="card">
-         <Link href={`/${info.numericCode}`}>
+         <Link href={`/${info.alpha3Code.toLowerCase()}`}>
             <a className="card__link">
                <img loading="lazy" className="card__image" src={info.flag} />
                <div className="card__info">
