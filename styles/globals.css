@@ -183,6 +183,12 @@ img {
    cursor: pointer;
 }
 
+.card__link,
+.card__link {
+   text-decoration: none;
+   color: inherit;
+}
+
 .card__link:active,
 .card__link:focus {
    text-decoration: none;
