@@ -23,8 +23,6 @@ export default function Country() {
       })()
    }, [id])
 
-   console.log(dataCode)
-
    return (
       <Fragment>
          <Seo />

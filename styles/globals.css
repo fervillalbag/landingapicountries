@@ -8,6 +8,16 @@
    --White: hsl(0, 0%, 100%);
 }
 
+html {
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
 body {
    font-family: 'Nunito Sans', sans-serif;
    background-color: var(--VeryDarkBlue);
@@ -16,10 +26,6 @@ body {
 img {
    display: block;
    width: 100%;
-}
-
-.form-select {
-   justify-self: end;
 }
 
 /* Navbar */
@@ -39,7 +45,7 @@ img {
 
 .navbar .container {
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
+   grid-template-columns: max-content auto;
    align-items: center;
 }
 
@@ -48,6 +54,12 @@ img {
    display: block;
    font-weight: 800;
    font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+   .navbar__heading {
+      font-size: 1.25rem;
+   }
 }
 
 .navbar__button {
@@ -73,6 +85,12 @@ img {
 
 .navbar__text {
    margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+   .navbar__text {
+      display: none;
+   }
 }
 
 /* Heading */
@@ -145,6 +163,23 @@ img {
    height: 1rem;
    border: none;
 }
+
+.form-select {
+   justify-self: end;
+}
+
+@media screen and (max-width: 768px) {
+   .heading .container {
+      grid-template-columns: 1fr;
+      grid-gap: 1.5rem 0;
+   }
+
+   .form-select {
+      justify-self: start;
+   }
+}
+
+/* Home */
 
 .home {
    margin-top: 1.5rem;
@@ -302,6 +337,17 @@ img {
    margin-top: 4rem;
 }
 
+@media screen and (max-width: 768px) {
+   .country-data {
+      grid-template-columns: 1fr;
+      grid-gap: 1rem 0;
+   }
+
+   .country__footer {
+      margin-top: 2rem;
+   }
+}
+
 .country__detail--borders {
    display: flex;
    justify-content: start;
@@ -311,13 +357,14 @@ img {
 .borders__grid {
    margin-left: 1rem;
    display: grid;
+   width: 100%;
    align-items: center;
    grid-template-columns: repeat(3, 1fr);
+   grid-gap: 1rem;
+   margin-bottom: 3rem;
 }
 
 .borders__grid div {
-   margin-bottom: 1rem;
-   margin-right: 1rem;
    padding: 0.45rem 2.5rem;
    border-radius: 0.25rem;
    background-color: var(--DarkBlue);
@@ -327,4 +374,20 @@ img {
    -webkit-box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.3);
    -moz-box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.3);
    box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.3);
+   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+   .country__detail--borders {
+      flex-direction: column;
+   }
+
+   .borders__grid div {
+      padding: 0.45rem 1.5rem;
+   }
+
+   .borders__grid {
+      margin-left: 0;
+      margin-top: 1rem;
+   }
 }
