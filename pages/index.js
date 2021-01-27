@@ -3,6 +3,7 @@ import { Fragment } from 'react';
 import Head from 'next/head'
 import Navbar from '../layout/Navbar'
 import Heading from '../layout/Heading'
+import HomePage from '../layout/HomePage';
 
 export default function Home() {
    return (
@@ -16,6 +17,7 @@ export default function Home() {
 
          <Navbar />
          <Heading />
+         <HomePage />
       </Fragment>
    )
 }

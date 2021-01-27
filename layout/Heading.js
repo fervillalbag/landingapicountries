@@ -1,38 +1,48 @@
 
-import styled from 'styled-components'
-import { colors } from '../utils/variables'
-
-const Form = styled.form`
-   padding-top: 2rem;
-   padding-bottom: 2rem;
-`
-
-const FormWrapper = styled.div`
-   max-width: 1200px;
-   width: 90vw;
-   margin-left: auto;
-   margin-right: auto;
-   display: grid;
-   grid-template-columns: 1fr 2fr;
-   align-items: center;
-`
-
-const InputText = styled.input`
-   width: 100%;
-   display: block;
-   height: 2rem;
-   outline: none;
-   border-radius: 0.375rem;
-   padding-left: 0.5rem;
-   background-color: ${colors.DarkBlue};
-`
-
 export default function Heading() {
+
+   const handleSearch = e => {
+      e.preventDefault()
+   }
+
    return (
-      <Form>
-         <FormWrapper>
-            <InputText type="text" />
-         </FormWrapper>
-      </Form>
+      <section className="heading">
+         <form className="form">
+            <div className="container">
+               <div className="form__group">
+                  <input type="text"
+                     className="form__input" />
+                  <button
+                     className="form__button"
+                     onClick={handleSearch}
+                     type="submit"
+                  >
+                     <i className="fas fa-search"></i>
+                  </button>
+               </div>
+               <div className="form-select">
+                  <select
+                     className="input__select"
+                  >
+                     <option className="form__option" value="">
+                        -- Filter by Region --
+                     </option>
+                     <option className="form__option" value="1">
+                        -- 1 --
+                     </option>
+                     <option className="form__option" value="2">
+                        -- 2 --
+                     </option>
+                     <option className="form__option" value="3">
+                        -- 3 --
+                     </option>
+                     <option className="form__option" value="4">
+                        -- 4 --
+                     </option>
+                  </select>
+               </div>
+            </div>
+         </form>
+      </section>
    )
 }
