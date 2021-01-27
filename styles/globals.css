@@ -269,6 +269,13 @@ img {
    grid-column-gap: 5rem;
 }
 
+@media screen and (max-width: 768px) {
+   .country__grid {
+      grid-template-columns: 1fr;
+      grid-gap: 2rem 0;
+   }
+}
+
 .country__heading {
    font-weight: 800;
    color: var(--White);
